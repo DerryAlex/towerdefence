@@ -1,0 +1,61 @@
+<html>
+	<head>
+		<meta charset ="UTF-8">
+		<title> Defend! </title>
+	</head>
+	<body>
+		<h1 align="center"> Defend! </h1>
+		<h3> 帮助 </h3>
+		<ul> 
+			<li> 点击前线开始下一轮，敌人将会从这里开始进攻你 <br>
+			<img src="resources/frontline.png" height="128">
+			<li> 请阻止敌人进入基地 <br>
+			<img src="resources/base.png" height="128">
+			<li> 点击阵地并输入防御塔的类型建造防御塔 <br>
+			<img src="resources/tower.png" height="128">
+			<li> 按下空格键可暂停游戏
+			<li> 选中防御塔后可按下r键可移除该塔并获得一定的经济补偿
+			<li> 你可以通过修改 <i> ex.js </i> 来支持自定义地图、自定义防御塔或自定义敌人
+		</ul>
+		<h3> 图鉴 </h3>
+		<ul>
+			<li> 弓箭塔(类型01)：费用75,攻击20,攻速20,范围29,单体伤害 <br>
+			<img src="resources/tower01.png" height="128">
+			<li> 魔法塔(类型02)：费用125,攻击30,攻速3,范围25,单体伤害 <br>
+			特殊技能：减速敌人，持续1.5秒 <br>
+			<img src="resources/tower02.png" height="128">
+			<li> 二阶弓箭塔(类型03)：费用150,攻击20,攻速40,范围30,单体伤害 <br>
+			仅在无尽模式中可用 <br>
+			<img src="resources/ex_tower01.png" height="128">
+			<li> 高阶魔法塔(类型04)：费用300,攻击50,攻速5,范围29,单体伤害 <br>
+			特殊技能：减速敌人，持续3.0秒 <br>
+			仅在无尽模式中可用 <br>
+			<img src="resources/ex_tower02.png" height="128">
+			<li> 高阶弓箭塔(类型05)：费用250,攻击18,攻速60,范围32,单体伤害 <br>
+			仅在无尽模式中可用 <br>
+			<img src="resources/ex_tower03.png" height="128">
+			<li> 兽人：生命1000,速度20 <br>
+			<img src="resources/enemy01.png" height="128">
+			<li> 强壮的兽人：生命???,速度20 <br>
+			<img src="resources/enemy01.png" height="128">
+			<li> 狼：生命500,速度60 <br>
+			<img src="resources/ex_enemy01.png" height="128">
+		</ul>
+		<div align="center">
+			<button style="background: red;color: white;text-align: center;font: 32px sans-serif;border-radius: 100px" onclick="start_game()"> 开始游戏 </button> <br>
+			<button style="background: orange;color: white;text-align: center;font: 32px sans-serif;border-radius: 100px" onclick="start_game2()"> 无尽模式 </button>
+			<script>
+				function start_game()
+				{
+					var ret = confirm("请确认您已仔细阅读帮助");
+					if (ret == true) window.open("towerdefence.html");
+				}
+				function start_game2()
+				{
+					var ret = confirm("请确认您已仔细阅读帮助");
+					if (ret == true) window.open("towerdefence-endless.html");
+				}
+			</script>
+		</div>
+	</body>
+</html>

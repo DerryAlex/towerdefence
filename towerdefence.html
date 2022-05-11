@@ -1,0 +1,39 @@
+<html>
+	<head>
+		<meta charset ="UTF-8">
+		<title> Defend! </title>
+	</head>
+	<body>
+		<div>
+			<div id="status" style="background-color: black;color: white;font: 20px sans-serif" height="32px"> 游戏轮数: <span id="round"> - </span> 经济: <span id="money"> - </span> </div>
+			<canvas id="canvas"> 你的浏览器不支持HTML5 canvas标签 </canvas>
+		</div>
+		<script type="text/javascript" src="global.js"></script>
+		<script type="text/javascript" src="map.js"></script>
+		<script type="text/javascript" src="enemy.js"></script>
+		<script type="text/javascript" src="tower.js"></script>
+		<script type="text/javascript" src="ex.js"></script>
+		<script type="text/javascript">
+			const status_height = 32;
+			
+			window.onload = function()
+			{
+				canvas.width = window.innerWidth - 16;
+				canvas.height = window.innerHeight - status_height - 16;
+				canvas.onclick = function(e) 
+				{
+					clicked = true;
+					clickX = e.offsetX;
+					clickY = e.offsetY;
+				}
+				document.onkeydown = function(e) {
+					pressed = true;
+					pressKey = e.key;
+				}
+				ex_main();
+				window.setTimeout(processor);
+				continue_game();
+			}
+		</script>
+	</body>
+</html>
